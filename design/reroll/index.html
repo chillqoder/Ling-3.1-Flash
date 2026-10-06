@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>REROLL® — a vibe-coding studio</title>
+<meta name="description" content="REROLL is a vibe-coding studio. We prompt, prune and ship AI-native products. This site rerolled its identity when you opened it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" id="favicon" href="">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="gl" aria-hidden="true"></canvas>
+<canvas id="dish" aria-label="Interactive studio field — drag, throw and click the floating specimens"></canvas>
+
+<header class="hud hud-top">
+  <div class="brand">
+    <span class="mark" id="mark" aria-hidden="true"></span>
+    <span class="word">REROLL<sup>®</sup></span>
+    <span class="tag">vibe-coding studio</span>
+  </div>
+  <div class="seedbox">
+    <span class="seedlabel" id="seedLabel">seed 0x000000</span>
+    <button class="btn" id="rerollBtn" type="button" title="roll a new identity (r)">⟳ reroll</button>
+  </div>
+</header>
+
+<footer class="hud hud-bottom">
+  <div class="hint" id="hint">drag · throw · click to open · double-click: gravity well</div>
+  <div class="controls">
+    <button class="btn" id="arrangeBtn" type="button" title="toggle layout (a)">◐ arrange: free</button>
+    <button class="btn" id="soundBtn" type="button" title="toggle audio (s)">♪ audio: off</button>
+    <button class="btn" id="motionBtn" type="button" title="toggle motion (m)">✦ motion: on</button>
+  </div>
+  <div class="entropy">
+    <span class="entlabel" id="entropyLabel">entropy 0.00</span>
+    <div class="meter" aria-hidden="true"><i id="entropyFill"></i></div>
+  </div>
+</footer>
+
+<div id="overlay" class="overlay" aria-hidden="true">
+  <div class="scrim" data-close></div>
+  <article class="panel" role="dialog" aria-modal="true" aria-labelledby="ovTitle">
+    <button class="close" type="button" data-close aria-label="close">✕</button>
+    <div class="kicker" id="ovKicker"></div>
+    <h2 id="ovTitle"></h2>
+    <div class="body" id="ovBody"></div>
+  </article>
+</div>
+
+<div class="grain" aria-hidden="true"></div>
+<noscript><div class="noscript">REROLL® needs JavaScript — the dish is alive.</div></noscript>
+<script src="core.js"></script>
+<script src="content.js"></script>
+<script src="knot.js"></script>
+<script src="dish.js"></script>
+<script src="ui.js"></script>
+</body>
+</html>

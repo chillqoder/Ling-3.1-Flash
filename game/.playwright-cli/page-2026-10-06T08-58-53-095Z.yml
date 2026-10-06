@@ -1,0 +1,10 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - generic: SCORE000000
+    - generic: COINS×00
+    - generic: WORLD1-1
+    - generic: TIME400
+    - generic: LIVES×3
+  - generic [ref=e2] [cursor=pointer]:
+    - heading "SUPER PLUMBER BROS" [level=1] [ref=e3]
+    - paragraph [ref=e4]: ARROWS / A D — MOVESPACE — JUMPSHIFT — RUNR — RESTARTRED MUSHROOM — GROW & BREAK BRICKSSTOMP TURTLES — KICK THEIR SHELLSPRESS ENTER OR CLICK TO START
